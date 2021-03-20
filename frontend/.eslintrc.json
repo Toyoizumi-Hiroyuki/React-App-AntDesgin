@@ -1,0 +1,87 @@
+{
+  "extends": [
+    "airbnb",
+    "plugin:prettier/recommended",
+    //"prettier/react"
+    "prettier/prettier"
+  ],
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "jest": true,
+    "node": true
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "no-console": 1,
+    "no-var": 1,
+    "no-unused-labels": 1,
+    "no-unused-vars": [
+      1, 
+      { 
+        "args": "none" 
+      }
+    ],
+    "no-unused-expressions": 1,
+    "max-params": [
+      1, 
+      4
+    ],
+    "max-lines": [
+      1, 
+      { 
+        "max": 500, 
+        "skipBlankLines": true, 
+        "skipComments": true 
+      }
+    ],
+    "max-len": [
+      1,
+      {
+        "code": 80,
+        "tabWidth": 2,
+        "comments": 80,
+        "ignoreComments": false,
+        "ignoreTrailingComments": true,
+        "ignoreUrls": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreRegExpLiterals": true
+      }
+    ],
+    "prefer-const": 1,
+    "semi": 1,
+    "quotes": [
+      2,
+      "single",
+      {
+        "avoidEscape": true,
+        "allowTemplateLiterals": true
+      }
+    ],
+    "import/prefer-default-export": 0,
+    "import/no-named-as-default": 0,
+    "import/no-named-as-default-member": 0,
+    "react/display-name": 1,
+    "react/no-array-index-key": 0,
+    "react/react-in-jsx-scope": 0,
+    "react/prefer-stateless-function": 0,
+    "react/forbid-prop-types": 0,
+    "react/no-unescaped-entities": 0,
+    "react/jsx-filename-extension": [
+      1, 
+      { 
+        "extensions": [".js", ".jsx"] 
+      }
+    ],
+    "jsx-a11y/accessible-emoji": 0,
+    "jsx-a11y/label-has-associated-control": [
+      "error",
+      {
+        "assert": "either"
+      }
+    ],
+    "jsx-a11y/href-no-hash": 0
+  }
+}

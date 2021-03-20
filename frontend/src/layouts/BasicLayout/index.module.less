@@ -1,0 +1,45 @@
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.logo {
+    height: 32px;
+    margin: 16px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.logOut {
+    background-color: transparent;
+    border: none;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.logOut:focus {
+    outline: none;
+}
+
+.layoutCustom {
+    height: 100%;
+    :global {
+        .ant-layout-sider {
+            background-color: transparent;
+        }
+        .ant-layout-sider-children {
+            background-color: #001529;
+        }
+    }
+    .mainCustom {
+        height: 100%;
+    }
+}
+
+.titleHandler {
+    display: inline;
+    float: left;
+    margin-top: 0px !important;
+    margin-left: 20px;
+    font-weight: bold;
+}
