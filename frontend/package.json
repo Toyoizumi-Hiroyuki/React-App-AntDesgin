@@ -17,17 +17,18 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "react": "^17.0.1",
+    "react-app-rewired": "^2.1.5",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "4.0.3",
-    "use-react-router": "^1.0.7",
-    "web-vitals": "^1.0.1"
+    "use-react-router": "^1.0.7"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "start": "react-app-rewired start",
+    "build:staging": "cross-env REACT_ENV=staging npm run build",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "test:coverage": "react-app-rewired test --coverage",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
