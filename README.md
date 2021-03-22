@@ -4,10 +4,6 @@
 # react 起動
 cd frontend
 yarn install
-yarn start
-
-# express 起動
-cd backend
-yarn install
+yarn lint:fix
 yarn start
 ```
