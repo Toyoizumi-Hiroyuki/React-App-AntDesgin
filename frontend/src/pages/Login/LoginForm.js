@@ -2,30 +2,50 @@
 import React, { useState } from 'react';
 import useReactRouter from 'use-react-router';
 import { Form, Icon, Input, Button, Checkbox, Alert } from 'antd';
-
-import { setToken } from '../../utils/auth';
-import request from '../../utils/request';
+// import { setToken } from '../../utils/auth';
+// import request from '../../utils/request';
 
 import styles from './index.module.less';
+
+const userCheck = (username, password) => {
+  if (username === 'admin' && password === 'admin') {
+    return true;
+  }
+  return false;
+};
 
 const LoginForm = ({ form }) => {
   const { history } = useReactRouter();
   const [error, setError] = useState(false);
 
+  // const handleSubmit = (e) => {
+  //  e.preventDefault();
+  //  form.validateFields((err, values) => {
+  //    setError(false);
+  //    if (!err) {
+  //      request
+  //        .post('/user/login', values)
+  //        .then(({ token }) => {
+  //          setToken(token);
+  //          history.push('/');
+  //        })
+  //        .catch(() => {
+  //          setError(true);
+  //        });
+  //    }
+  //  });
+  // };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     form.validateFields((err, values) => {
       setError(false);
-      if (!err) {
-        request
-          .post('/user/login', values)
-          .then(({ token }) => {
-            setToken(token);
-            history.push('/');
-          })
-          .catch(() => {
-            setError(true);
-          });
+      const isCheck = userCheck(values.username, values.password);
+      if (!err && isCheck) {
+        localStorage.setItem('login', 'true');
+        history.push('/');
+      } else {
+        setError(true);
       }
     });
   };

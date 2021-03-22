@@ -2,9 +2,8 @@
 /* eslint-disable react/prop-types */
 import React, { useEffect, useState } from 'react';
 import useReactRouter from 'use-react-router';
-
 import { getToken, setToken, removeToken, gotoLogin } from '../utils/auth';
-import request from '../utils/request';
+// import request from '../utils/request';
 
 export const AuthContext = React.createContext({});
 
@@ -15,9 +14,9 @@ export const AuthProvider = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userid, setUserid] = useState(null);
 
-  const checkAuth = () => {
-    return request.post('/user/info', {});
-  };
+  // const checkAuth = () => {
+  //  return request.post('/user/info', {});
+  // };
 
   useEffect(() => {
     setIsLoggedIn(false);
@@ -26,19 +25,28 @@ export const AuthProvider = ({ children }) => {
       return;
     }
 
-    const token = getToken();
+    // const token = getToken();
+    // if (token) {
+    //  checkAuth()
+    //    .then(({ token, userid }) => {
+    //      setToken(token);
+    //      setIsLoggedIn(true);
+    //      setUserid(userid);
+    //    })
+    //    .catch(() => {
+    //      removeToken();
+    //      gotoLogin();
+    //    });
+    // } else {
+    //  gotoLogin();
+    // }
+    // }, [pathname]);
 
-    if (token) {
-      checkAuth()
-        .then(({ token, userid }) => {
-          setToken(token);
-          setIsLoggedIn(true);
-          setUserid(userid);
-        })
-        .catch(() => {
-          removeToken();
-          gotoLogin();
-        });
+    const loginStatus = localStorage.getItem('login');
+
+    if (loginStatus) {
+      setIsLoggedIn(true);
+      setUserid('admin');
     } else {
       gotoLogin();
     }
