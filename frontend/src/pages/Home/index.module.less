@@ -4,16 +4,17 @@
 }
 
 .lastLoginHandler {
-    padding: 20px 0 50px;
-    color: black;
+    padding: 20px 0 0;
+    text-align: right;
+    margin-right: 30px;
 }
 
 .rowPanel {
-    display: flex; /* equal height of the children */
+    display: flex;
 }
   
-.btnDash {
-    flex: 1; /* additionally, equal width */
+.btnPanel {
+    flex: 1;
     min-height: 120px;
     margin: 10px 10px;
     transition: all 0.3s;
@@ -23,7 +24,6 @@
     position: relative;
     display: block;
     color: black;
-
     &:hover {
         position: relative;
         z-index: 1;
@@ -40,7 +40,6 @@
     & > h3 {
         font-weight: bold;
     }
-
     & > p {
         font-size: 12px;
     }

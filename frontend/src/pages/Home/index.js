@@ -26,7 +26,7 @@ class Home extends React.Component {
           <Row>
             <Col span={24}>
               <div className={styles.rowPanel}>
-                <Link to="/home" className={styles.btnDash}>
+                <Link to="/home" className={styles.btnPanel}>
                   <div className={styles.leftPanel}>
                     <h3>Home</h3>
                     <p>あああああああ</p>
@@ -38,7 +38,7 @@ class Home extends React.Component {
                     />
                   </div>
                 </Link>
-                <Link to="/dashboard" className={styles.btnDash}>
+                <Link to="/dashboard" className={styles.btnPanel}>
                   <div className={styles.leftPanel}>
                     <h3>Dashboard</h3>
                     <p>いいいいいいい</p>
