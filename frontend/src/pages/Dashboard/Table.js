@@ -8,40 +8,17 @@ const TableChart = () => {
   const dataSource = [
     {
       key: '1',
-      name: 'Qiitaのストック数を確認できる拡張機能を作った話',
-      url: 'https://qiita.com/tonio0720/items/fefcdd5b88cdf239a5a1',
-      tags: ['Qiita', 'JavaScript', 'QiitaAPI', 'chrome-extension', 'Vue.js'],
-      likes: 175,
+      name: 'ACM + CloudFrontでLightsailをHTTPS化するまでの備忘録',
+      url: 'https://qiita.com/Toyoizumi-Hiroyuki/items/64740c0558698b1f373c',
+      tags: ['AWS', 'CloudFront', 'Lightsail', 'CertificateManager'],
+      likes: 8,
     },
     {
       key: '2',
-      name:
-        'Slack + Electron + Socket.ioを使ってニコニコ動画風にメッセージを表示する',
-      url: 'https://qiita.com/tonio0720/items/bd6362d27084738bbfe2',
-      tags: ['JavaScript', 'Socket.io', 'ネタ', 'Slack', 'Electron'],
-      likes: 70,
-    },
-    {
-      key: '3',
-      name: 'チームの1年間のいいね数をD3.jsを使ってアニメーションで可視化する',
-      url: 'https://qiita.com/tonio0720/items/2548d810e37c442aa540',
-      tags: ['Qiita', 'JavaScript', 'd3.js', 'QiitaAPI', '可視化'],
-      likes: 54,
-    },
-    {
-      key: '4',
-      name: 'Nodejsを使ってSeleniumでChromeを動かす',
-      url: 'https://qiita.com/tonio0720/items/70c13ad304154d95e4bc',
-      tags: ['JavaScript', 'Node.js', 'Chrome', 'WebDriver', 'Selenium'],
-      likes: 45,
-    },
-    {
-      key: '5',
-      name:
-        'これさえあればWEBアプリが簡単に作れる！Nuxt・Express・Vuetifyを使ったログイン画面の実装テンプレ',
-      url: 'https://qiita.com/tonio0720/items/b4449e31ee3c06553a6e',
-      tags: ['JavaScript', 'Express', 'Vue.js', 'nuxt.js', 'vuetifyjs'],
-      likes: 30,
+      name: 'Macにpyenv + AnacondaでPython環境作成の備忘録',
+      url: 'https://qiita.com/Toyoizumi-Hiroyuki/items/a03305f290aa04e1b2f5',
+      tags: ['Python', 'Mac', 'Anaconda'],
+      likes: 14,
     },
   ];
 
