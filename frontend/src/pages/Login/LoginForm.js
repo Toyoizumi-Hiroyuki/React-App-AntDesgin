@@ -55,19 +55,18 @@ const LoginForm = ({ form }) => {
     <Form onSubmit={handleSubmit}>
       {error && (
         <Alert
-          description="Password Incorrect."
+          description="Input Usename：admin / Password：admin"
           type="error"
           showIcon
           style={{ marginBottom: 16 }}
         />
       )}
-      <span>username: admin, password: admin</span>
       <Form.Item>
         {getFieldDecorator('username', {
-          rules: [{ required: true, message: 'Please input your username!' }],
+          rules: [{ required: true, message: 'Please input your username' }],
         })(
           <Input
-            autocomplete="off"
+            autoComplete="off"
             prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
             placeholder="Username"
           />,
@@ -75,7 +74,7 @@ const LoginForm = ({ form }) => {
       </Form.Item>
       <Form.Item>
         {getFieldDecorator('password', {
-          rules: [{ required: true, message: 'Please input your Password!' }],
+          rules: [{ required: true, message: 'Please input your Password' }],
         })(
           <Input
             prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
@@ -94,7 +93,7 @@ const LoginForm = ({ form }) => {
           htmlType="submit"
           className={styles.loginFormButton}
         >
-          Log in
+          Login
         </Button>
       </Form.Item>
     </Form>
