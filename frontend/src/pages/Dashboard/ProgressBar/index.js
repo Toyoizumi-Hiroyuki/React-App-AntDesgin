@@ -1,5 +1,4 @@
 import React from 'react';
-import { Tooltip } from 'antd';
 
 import styles from './index.module.less';
 
@@ -29,7 +28,6 @@ const ProgressBar = ({ height = 12, data = [], colors = [], total }) => {
       </div>
     );
   };
-
   return render();
 };
 

@@ -22,6 +22,9 @@ const BasicLayout = ({ children }) => {
     case '/dashboard':
       titlePage = 'Dashboard';
       break;
+    case '/user':
+      titlePage = 'User';
+      break;
     default:
       break;
   }
@@ -56,6 +59,12 @@ const BasicLayout = ({ children }) => {
             <Icon type="dashboard" />
             <span>
               <Link to="/dashboard">Dashboard</Link>
+            </span>
+          </Menu.Item>
+          <Menu.Item key="user">
+            <Icon type="user" />
+            <span>
+              <Link to="/user">User</Link>
             </span>
           </Menu.Item>
         </Menu>

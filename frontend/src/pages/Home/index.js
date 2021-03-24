@@ -22,14 +22,13 @@ class Home extends React.Component {
               </h1>
             </Col>
           </Row>
-
           <Row>
             <Col span={24}>
               <div className={styles.rowPanel}>
-                <Link to="/home" className={styles.btnPanel}>
+                <Link to="/dashboard" className={styles.btnPanel}>
                   <div className={styles.leftPanel}>
-                    <h3>Home</h3>
-                    <p>あああああああ</p>
+                    <h3>Dashboard</h3>
+                    <p>ああああああ</p>
                   </div>
                   <div className={styles.iconHandler}>
                     <Icon
@@ -38,10 +37,10 @@ class Home extends React.Component {
                     />
                   </div>
                 </Link>
-                <Link to="/dashboard" className={styles.btnPanel}>
+                <Link to="/User" className={styles.btnPanel}>
                   <div className={styles.leftPanel}>
-                    <h3>Dashboard</h3>
-                    <p>いいいいいいい</p>
+                    <h3>User</h3>
+                    <p>いいいいい</p>
                   </div>
                   <div className={styles.iconHandler}>
                     <Icon
