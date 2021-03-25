@@ -43,7 +43,7 @@ const LoginForm = ({ form }) => {
       const isCheck = userCheck(values.username, values.password);
       if (!err && isCheck) {
         localStorage.setItem('login', 'true');
-        history.push('/');
+        history.push('/home');
       } else {
         setError(true);
       }

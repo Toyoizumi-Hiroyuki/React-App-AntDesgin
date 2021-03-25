@@ -21,7 +21,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     setIsLoggedIn(false);
 
-    if (pathname === '/login') {
+    if (pathname === '/') {
       return;
     }
 
@@ -59,7 +59,7 @@ export const AuthProvider = ({ children }) => {
         userid,
       }}
     >
-      {(isLoggedIn || pathname === '/login') && children}
+      {(isLoggedIn || pathname === '/') && children}
     </AuthContext.Provider>
   );
 };

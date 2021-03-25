@@ -16,8 +16,7 @@ function App() {
     <BrowserRouter>
       <AuthProvider>
         <Switch>
-          <Route path="/login" component={LoginPage} />
-          <Route exact path="/" render={redirect} />
+          <Route exact path="/" component={LoginPage} />
           <Route path="/home" component={HomePage} />
           <Route path="/dashboard" component={DashboardPage} />
           <Route path="/user" component={UserPage} />

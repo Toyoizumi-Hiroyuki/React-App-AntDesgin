@@ -10,7 +10,7 @@ const theme = require('./src/theme');
 
 const modifyVars = {};
 Object.keys(theme).forEach((key) => {
-  modifyVars[`@${key.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()}`] =
+  modifyVars[`${key.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()}`] =
     theme[key];
 });
 
@@ -18,7 +18,7 @@ const config = {
   webpack: override(
     disableEsLint(),
     addWebpackAlias({
-      '@': path.resolve(__dirname, 'src'),
+      '/': path.resolve(__dirname, 'src'),
     }),
     fixBabelImports('import', {
       libraryName: 'antd',
